@@ -36,7 +36,7 @@ const Register = () => {
             .catch(err => toast('Try Again Please', err))
 
 
-    //     fetch('https://b8a11-server-side-wdkammrul.vercel.app/apply', {
+    //     fetch('https://task-trackr-server-roan.vercel.app/apply', {
     //         method: "POST",
     //         headers: {
     //             "content-type": "application/json",

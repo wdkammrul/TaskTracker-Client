@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
@@ -8,7 +9,7 @@ const CreateTask = ({tasks, setTasks}) => {
     const [task, setTask] = useState({
         id: '', 
         name: '',
-        status: 'todo' //cal also be inprogress or closed
+        status: 'todo' 
     })
 
     console.log(task)
@@ -23,11 +24,14 @@ const CreateTask = ({tasks, setTasks}) => {
         return toast.error("A task must not be more than 100 characters")
 
         setTasks((prev) => {
-            const List = [...prev, task]
 
-            localStorage.setItem("tasks", JSON.stringify(List))
+            console.log(prev)
+
+            const list = [...prev, task]
+
+            localStorage.setItem("tasks", JSON.stringify(list))
         
-            return List;
+            return list;
         })
 
         toast.success("Task Created")
@@ -62,7 +66,7 @@ const CreateTask = ({tasks, setTasks}) => {
                 </div>
             </div>
             <select className="select select-bordered w-52 join-item">
-                <option disabled selected>Priority</option>
+                <option disabled >Priority</option>
                 <option>High</option>
                 <option>Medium</option>
                 <option>Low</option>

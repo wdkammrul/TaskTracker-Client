@@ -11,7 +11,7 @@ const DashBoard = () => {
 
     // const [allProfile, setAllProfile] = useState([])
     // useEffect(() => {
-    //     fetch('https://diagno-easy-server.vercel.app/users')
+    //     fetch('https://task-trackr-server-roan.vercel.app/users')
     //         .then(res => res.json())
     //         .then(data => setAllProfile(data))
     // }, [])

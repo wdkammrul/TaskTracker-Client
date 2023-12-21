@@ -17,9 +17,9 @@ const ListTasks = ({ tasks, setTasks }) => {
 
 
     useEffect(() => {
-        const fTodos = tasks.filter((task) => task.status === "todo");
-        const fInProgress = tasks.filter((task) => task.status === "inprogress");
-        const fClosed = tasks.filter((task) => task.status === "closed");
+        const fTodos = tasks?.filter((task) => task.status === "todo");
+        const fInProgress = tasks?.filter((task) => task.status === "inprogress");
+        const fClosed = tasks?.filter((task) => task.status === "closed");
 
 
         setTodos(fTodos)
@@ -66,18 +66,18 @@ const Section = ({ status, tasks, setTasks, todos, inProgress, closed }) => {
         }),
     }));
 
-    let text = "Todo";
+    let text = "To-Do";
     let bg = "bg-slate-500"
     let tasksToMap = todos
 
     if (status === "inprogress") {
-        text = "In Progress"
+        text = "OnGoing"
         bg = "bg-purple-500"
         tasksToMap = inProgress
     }
 
     if (status === "closed") {
-        text = "Closed"
+        text = "Completed"
         bg = "bg-green-500"
         tasksToMap = closed
     }
@@ -89,12 +89,16 @@ const Section = ({ status, tasks, setTasks, todos, inProgress, closed }) => {
         setTasks(prev => {
 
             const mTasks = prev.map(t => {
-                if(t.id === id){
-                    return{...t, status: status}
+                if (t.id === id) {
+                    return { ...t, status: status }
                 }
 
-                return t 
+                return t
             })
+
+            localStorage.setItem("tasks", JSON.stringify(mTasks))
+
+            toast("Task status changed", { icon: "👍" })
 
             return mTasks
         })
@@ -103,8 +107,8 @@ const Section = ({ status, tasks, setTasks, todos, inProgress, closed }) => {
 
     return (
         <div ref={drop} className={`w-64 rounded-md p-2 ${isOver ? "bg-violet-400" : ""}`}>
-            <Header text={text} bg={bg} count={tasksToMap.length} />
-            {tasksToMap.length > 0 && tasksToMap.map(task =>
+            <Header text={text} bg={bg} count={tasksToMap?.length} />
+            {tasksToMap?.length > 0 && tasksToMap?.map(task =>
                 <Task key={task.id} task={task} tasks={tasks} setTasks={setTasks} />)}
         </div>
     )

@@ -12,7 +12,7 @@ const Banner = () => {
                         <p className="mb-5 text-xl md:text-4xl my-6 font-medium text-blue-400"> Innovative Task Management Solution.</p>
                         <div className="form-control ">
                             <div className="input-group flex justify-center mx-auto mt-4">
-                                <NavLink to='/' className="btn btn-primary bg-blue-500 mt-6 w-64 flex justify-center mx-auto text-white">Let’s Explore</NavLink>
+                                <NavLink to='/dashBoard' className="btn btn-primary bg-blue-500 mt-6 w-64 flex justify-center mx-auto text-white">Let’s Explore</NavLink>
                             </div>
                         </div>
                     </div>
