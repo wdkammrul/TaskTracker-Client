@@ -14,6 +14,7 @@ import Benefit from "../Pages/Home/Benefit/Benefit";
 import Others from "../Pages/Others/Others";
 
 
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -55,8 +56,7 @@ export const router = createBrowserRouter([
              {
                 path: '/dashBoard/tasks',
                 element: <Tasks></Tasks>
-             },
-
+             }
         ]
     }
 ]);

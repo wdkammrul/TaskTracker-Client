@@ -6,13 +6,17 @@ import { toast } from "react-toastify";
 
 const CreateTask = ({ tasks, setTasks }) => {
 
+    
     const [task, setTask] = useState({
         id: '',
         name: '',
+        description: '',
+        deadlines: '',
+        priority: '',
         status: 'todo'
     })
 
-    console.log(task)
+    // console.log(task)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -32,7 +36,6 @@ const CreateTask = ({ tasks, setTasks }) => {
 
             localStorage.setItem("tasks", JSON.stringify(list))
 
-
             return list;
         })
 
@@ -41,6 +44,9 @@ const CreateTask = ({ tasks, setTasks }) => {
         setTask({
             id: '',
             name: '',
+            description: '',
+            deadlines: '',
+            priority: '',
             status: 'todo'
         })
     }
@@ -68,7 +74,7 @@ const CreateTask = ({ tasks, setTasks }) => {
                     <input className="input input-bordered join-item" name="deadlines" type="date" placeholder="Deadlines" />
                 </div>
 
-                <select className="select select-bordered w-52 join-item">
+                <select name="priority" className="select select-bordered w-52 join-item">
                     <option disabled >Priority</option>
                     <option>High</option>
                     <option>Medium</option>
