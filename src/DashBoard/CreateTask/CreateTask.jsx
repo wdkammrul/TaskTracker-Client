@@ -53,7 +53,7 @@ const CreateTask = ({ tasks, setTasks }) => {
 
     return (
         <form onSubmit={handleSubmit} className="join" >
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-0 mx-auto">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 mx-auto">
 
                 <div>
                     <input className="input input-bordered join-item" placeholder="Title"
@@ -65,21 +65,21 @@ const CreateTask = ({ tasks, setTasks }) => {
                 </div>
 
 
-                <div>
+                {/* <div>
                     <input className="input input-bordered join-item" placeholder="Description" name="description" type="text" />
-                </div>
+                </div> */}
 
 
-                <div>
+                {/* <div>
                     <input className="input input-bordered join-item" name="deadlines" type="date" placeholder="Deadlines" />
-                </div>
+                </div> */}
 
-                <select name="priority" className="select select-bordered w-52 join-item">
+                {/* <select name="priority" className="select select-bordered w-52 join-item">
                     <option disabled >Priority</option>
                     <option>High</option>
                     <option>Medium</option>
                     <option>Low</option>
-                </select>
+                </select> */}
                 <div className="indicator">
                     {/* <span className="indicator-item badge badge-secondary">new</span> */}
                     <button className="btn bg-blue-700 hover:bg-blue-500 w-44 join-item">Create</button>
