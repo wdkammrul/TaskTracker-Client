@@ -5,9 +5,9 @@ const Benefit = () => {
         <div>
             <div><br /><br /><br /></div>
             <SectionTitle
-                heading={'Users Benefit'}
+                heading={'Users Benefits'}
             ></SectionTitle>
-            <div className="grid md:grid-cols-2 gap-8 mt-20">
+            <div className="grid md:grid-cols-2 gap-8 mt-20 w-[400px] md:w-[740px] lg:w-full mx-auto">
                 <div className="bg-slate-400 p-10 space-y-4 text-black rounded-lg">
                     <img className="w-36" src="https://i.ibb.co/ZV72K0D/service1-61241c61.webp" alt="" />
                     <h1 className="text-3xl font-bold">Doctors</h1>

@@ -10,6 +10,8 @@ import DashBoard from "../Layout/DashBoard";
 import PrivateRoute from "../AuthenticationPage/PrivateRoute/PrivateRoute";
 import Profile from "../DashBoard/Profile/Profile";
 import Tasks from "../DashBoard/Tasks/Tasks";
+import Benefit from "../Pages/Home/Benefit/Benefit";
+import Others from "../Pages/Others/Others";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +23,14 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+            },
+            {
+                path: '/benefit',
+                element: <Benefit></Benefit>
+            },
+            {
+                path: '/others',
+                element: <Others></Others>
             },
             {
                 path: '/login',

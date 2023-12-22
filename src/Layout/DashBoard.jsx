@@ -21,7 +21,7 @@ const DashBoard = () => {
 
     return (
       <div className="">
-            <div className="flex mt-10 gap-6">
+            <div className="flex mt-10 gap-6 w-[400px] md:w-[740px] lg:w-full mx-auto">
                 <div className="w-52 min-h-svh bg-indigo-500 rounded-lg">
                     <ul className="menu space-y-3">
                         <NavLink to='/' className='bg-blue-600-600 btn btn-secondary text-white'>Go Home</NavLink>
